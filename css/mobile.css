@@ -1,0 +1,71 @@
+@media (max-width: 576px) {
+  /* nav bar */
+
+  .nav-component:link {
+    display: block;
+    padding: 8px 16px;
+  }
+
+  .profile-pic-space:link {
+    display: none;
+  }
+
+  .profile-pic {
+    transform: translate(-50%, -140%);
+  }
+
+  /* 6 job cards grid */
+
+  .job-card {
+    width: 100%;
+  }
+
+  /* certificate */
+
+  .certificate {
+    border-bottom: 2px solid #d6c08d;
+    padding-bottom: 24px;
+  }
+
+  .certificate.first-in-row {
+    border-right: none;
+  }
+
+  .certificate-box .line {
+    display: none;
+  }
+
+  /* project */
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-about {
+    grid-template-columns: 1fr;
+    padding-left: 16px;
+    row-gap: 16px;
+  }
+
+  .project-year {
+    justify-self: start;
+  }
+
+  .project-about p:nth-child(3) {
+    grid-column: 1;
+  }
+
+  .project-detail th {
+    width: 25%;
+  }
+
+  /* footer */
+
+  #footer li {
+    padding: 0 16px;
+  }
+
+  #footer span {
+    display: none;
+  }
+}

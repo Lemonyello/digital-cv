@@ -1,0 +1,175 @@
+/* general styles */
+
+:root {
+  --color-main: #ffdf6b;
+  --color-grey: #504343;
+  --bg-color: #f9fbe7;
+  --color-border: #f0edd4;
+  --color-border-header: #e1d4bb;
+  --color-bg-index: #ffe194;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  color: var(--color-grey);
+  background-color: var(--color-main);
+  padding-top: 32px;
+}
+
+section {
+  padding: 32px 24px 64px 24px;
+  background-color: var(--bg-color);
+}
+
+.section-header {
+  border-bottom: 2px solid var(--color-border-header);
+  padding-bottom: 16px;
+  font-weight: bold;
+}
+
+.btn-back-to-cv:link,
+.btn-back-to-cv:visited {
+  text-decoration: none;
+  color: var(--color-grey);
+  background-color: var(--bg-color);
+  padding: 16px 24px;
+  margin-left: 32px;
+}
+
+.btn-back-to-cv i {
+  vertical-align: middle;
+}
+
+/* general styles for sections */
+
+.grid-box {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+[class$="item"] {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-items: center;
+  padding: 16px 0;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+i {
+  font-size: 32px;
+}
+
+/* goals */
+
+.goal-item {
+  border-bottom: 2px solid var(--color-border);
+}
+
+.goal-item div {
+  justify-self: start;
+}
+
+/* team */
+
+.team-item div {
+  justify-self: start;
+}
+
+/* timeline */
+
+.timeline {
+  grid-row: 1 / span 2;
+  grid-column: 3/-1;
+}
+
+.timeline-item {
+  border-bottom: 3px dashed var(--color-border);
+}
+
+.timeline-index {
+  background-color: var(--color-bg-index);
+  border: 2px solid var(--color-grey);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 8%;
+  font-size: 24px;
+}
+
+.timeline-description {
+  justify-self: start;
+}
+
+/* scopes */
+
+.scope h4 {
+  text-transform: uppercase;
+}
+
+.scope .section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+}
+
+.scope br {
+  display: block;
+  content: "";
+  margin-top: 1em;
+}
+
+/* primary */
+
+.primary-item p {
+  justify-self: start;
+}
+
+/* responsive */
+
+@media (max-width: 992px) {
+  .grid-box,
+  [class$="item"],
+  .scope .section-content {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .scope {
+    order: 2;
+  }
+
+  .team {
+    order: 3;
+  }
+
+  .primary {
+    order: 4;
+  }
+
+  .timeline {
+    order: 5;
+  }
+
+  .timeline-index {
+    font-size: 24px;
+    padding: 8px;
+    justify-self: start;
+    margin-bottom: 16px;
+  }
+}

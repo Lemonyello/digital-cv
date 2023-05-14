@@ -1,0 +1,37 @@
+@media (max-width: 768px) {
+  /* nav bar */
+
+  .profile-pic-space {
+    width: 10px;
+  }
+
+  /* 6 job cards grid */
+
+  .job-card {
+    width: 48%;
+  }
+
+  /* project */
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-about p:nth-child(3) {
+    grid-column: 2;
+  }
+
+  .project-detail th {
+    width: 25%;
+  }
+
+  /* footer */
+
+  #footer i {
+    font-size: 24px;
+  }
+}
